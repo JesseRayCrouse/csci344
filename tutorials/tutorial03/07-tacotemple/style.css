@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightskyblue;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: auto 160px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.card img{
+    justify-content: space-between;
+    align-items: end;
+
+}
