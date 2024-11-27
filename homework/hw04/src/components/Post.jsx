@@ -11,16 +11,16 @@ export default function Post({postData, token}) {
                 <h3 className="text-lg font-Comfortaa font-bold">
                     {postData.user.username}
                 </h3>
-                <button className="icon-button"><i class="fas fa-ellipsis-h"></i></button>
+                <button className="icon-button" aria-label="Unbookmark This Post"><i className="fas fa-ellipsis-h"></i></button>
             </div>
             <img src={postData.image_url} alt={postData.alt_text || "Post Photo"} width="300" height="300"
                 className="w-full bg-cover" />
            <div className="p-4">
                 <div className="flex justify-between text-2xl mb-3">
                     <div className="flex gap-2">
-                        <Like likeId={postData.current_user_like_id} />
-                        <button><i className="far fa-comment"></i></button>
-                        <button><i className="far fa-paper-plane"></i></button>
+                        <Like likeId={postData.current_user_like_id} postId={postData.id} token={token}/>
+                        <button aria-label="Comment On This Post"><i className="far fa-comment"></i></button>
+                        <button aria-label="Share This Post"><i className="far fa-paper-plane"></i></button>
                     </div>
                     <div>
                         <Bookmark bookmarkId={postData.current_user_bookmark_id} postId={postData.id} token={token}/>

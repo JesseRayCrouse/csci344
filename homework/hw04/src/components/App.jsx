@@ -26,7 +26,7 @@ export default function App({ username, token }) {
             <aside className="fixed top-[100px] left-[63vw] w-70 hidden md:block max-w-[300px]">
                 {/* Profile Panel */}
                 <Profile token={token} />
-
+                <p className="text-base text-gray-400 font-bold mb-4">Suggestions for you</p>
                 {/* Suggestions Panel */}
                 <Suggestions token={token} />
             </aside>
