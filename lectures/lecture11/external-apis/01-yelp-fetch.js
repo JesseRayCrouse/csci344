@@ -2,8 +2,8 @@ const showRestaurants = async (location, term, limit) => {
     const rootURL = 'https://www.apitutor.org/yelp/simple/v3/businesses/search';
     const endpoint = `${rootURL}?location=${location}&term=${term}&limit=${limit}`;
     const response = await fetch(endpoint);
-    const jsonData = await response.json();
-    console.log(`Matches for ${term}:`, jsonData);
+    const jsonData = await response.jsonData();
+
  };
 
 // note that the thai restaurants might 
